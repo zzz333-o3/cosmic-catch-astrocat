@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slime Hero Clicker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Top HUD -->
+        <header id="top-hud">
+            <div id="gold-display" class="hud-item glass">
+                <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Gold" class="coin-icon">
+                <span id="gold-count">0</span>
+            </div>
+            <div id="wave-display" class="hud-item glass">
+                <div class="threat-label">Threat Level: <span id="mutation-phase">1</span></div>
+                <div class="wave-label">Wave: <span id="wave-count">1</span>/10</div>
+            </div>
+            <button id="settings-btn" class="glass icon-btn">
+                <img src="https://cdn-icons-png.flaticon.com/512/2040/2040504.png" alt="Settings">
+            </button>
+        </header>
+
+        <!-- Main Action Zone -->
+        <main id="action-zone">
+            <div id="monster-container">
+                <div id="boss-timer" class="hidden">30s</div>
+                <div id="monster-sprite-wrapper">
+                    <img id="monster-sprite" src="" alt="Monster">
+                </div>
+                <div id="hp-bar-container">
+                    <div id="hp-bar-fill"></div>
+                    <div id="hp-text">0 / 0</div>
+                </div>
+            </div>
+            <!-- Click Effects Layer -->
+            <div id="click-layer"></div>
+        </main>
+
+        <!-- Shop Panel -->
+        <footer id="shop-panel" class="glass">
+            <div class="shop-header">
+                <h3>UPGRADES</h3>
+                <div id="dps-display">DPS: <span id="current-dps">0</span></div>
+            </div>
+            <div id="upgrade-list" class="shop-list">
+                <!-- Upgrades will be injected here via JS -->
+            </div>
+        </footer>
+
+        <!-- Progress Popup -->
+        <div id="offline-popup" class="modal hidden">
+            <div class="modal-content glass">
+                <h2>Welcome Back!</h2>
+                <p>Your helpers were busy while you were away.</p>
+                <div class="gold-earned-row">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Gold">
+                    <span id="offline-gold">0</span>
+                </div>
+                <button id="claim-btn">Awesome!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
