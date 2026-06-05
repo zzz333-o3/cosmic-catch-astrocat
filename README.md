@@ -1,73 +1,105 @@
-# Welcome to your Lovable project
+# 🪐 Cosmic Catch — Astrocat
 
-## Project info
+A 2D mobile casual game built with Unity where you control a space cat catching falling fruits, avoiding slimes, and using power-ups across 10 cosmic-themed planets.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 🎮 Gameplay
 
-There are several ways of editing your application.
+- **Catch** fruits falling from the sky to earn coins
+- **Avoid** slimes — each one costs you a life
+- **Use power-ups**: Magnet, Freeze, and Frenzy
+- **Collect stars** to unlock new levels and progress through the galaxy
+- **Earn coins** to buy skins, trails, and pet companions in the shop
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🌍 Levels (10 Planets)
 
-Changes made via Lovable will be committed automatically to this repo.
+| # | Planet | Difficulty | Min Stars to Win |
+|---|--------|-----------|-----------------|
+| 1 | GreenTerra | Easy | ⭐ |
+| 2 | OrangeDune | Easy | ⭐ |
+| 3 | Mechano | Easy | ⭐ |
+| 4 | NeonCity | Medium | ⭐⭐ |
+| 5 | IceIgloo | Medium | ⭐⭐ |
+| 6 | Crystallia | Medium | ⭐⭐ |
+| 7 | Aquamarine | Hard | ⭐⭐ |
+| 8 | MagmaPrime | Hard | ⭐⭐ |
+| 9 | FoggyVoid | Final | ⭐⭐⭐ |
+| 10 | HeartofGalaxy | Final | ⭐⭐⭐ |
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛍️ Shop
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Skins** (5): Classic · Gold · Diamond · Pink · Iron
+- **Trails** (4): Stars · Diamonds · Rainbow · Fire
+- **Pets** (6): Apple Picker · Banana Catcher · Orange Seeker · Grape Gatherer · Slime Hunter · Diamond Miner
 
-Follow these steps:
+Pets unlock at specific level milestones and help collect items automatically!
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## ⚡ Power-Ups
 
-# Step 3: Install the necessary dependencies.
-npm i
+| Power-Up | Effect | Duration |
+|----------|--------|----------|
+| 🧲 Magnet | Pulls all fruits toward the player | 7s |
+| ❄️ Freeze | Pauses the countdown timer | 7s |
+| 🌟 Frenzy | Massively increases item spawn rate | 7s |
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+---
+
+## 🛠️ Tech Stack
+
+- **Engine**: Unity 2D (C#)
+- **UI**: Unity UI + TextMesh Pro
+- **Persistence**: Unity PlayerPrefs
+- **Audio**: Unity AudioManager (3-source system)
+- **Target Platform**: Android / iOS
+
+---
+
+## 📁 Project Structure
+
+```
+unity_project/
+├── Assets/
+│   ├── Scripts/       # All 16 C# game scripts
+│   ├── Scenes/        # Game scenes (MainMenu, LoadingScene, 10 levels)
+│   ├── Sprites/       # Game art assets
+│   ├── Audio/         # Music and SFX
+│   └── Prefabs/       # Items, pets, trails, UI prefabs
+├── Packages/
+└── ProjectSettings/
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📜 Scripts
 
-**Use GitHub Codespaces**
+| Script | Role |
+|--------|------|
+| `GameManager.cs` | Core game state — score, lives, timer, win/lose |
+| `AudioManager.cs` | Music & SFX management |
+| `LevelManager.cs` | Level order, loading, progression |
+| `PlayerController.cs` | Player movement, skins, pets, power-up states |
+| `ItemSpawner.cs` | Spawning fruits, slimes, diamonds, power-ups |
+| `FallingItem.cs` | Item physics, magnet, collision |
+| `PowerUpItem.cs` | Power-up trigger handler |
+| `PetAbility.cs` | Pet AI — hunt, retrieve, follow |
+| `MainMenuManager.cs` | Menu, shop, settings |
+| `LevelButton.cs` | Level select button logic |
+| `LevelStarDisplay.cs` | Star display + lock overlay |
+| `ButtonSound.cs` | Auto click sound on buttons |
+| `AsyncLoader.cs` | Async scene loading |
+| `LoadingAnimator.cs` | Loading screen animation |
+| `CameraScaler.cs` | Responsive camera scaling |
+| `ObjectResizer.cs` | Responsive world object scaling |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 📖 Documentation
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Full technical documentation is available in [Confluence](https://gravityfusion.atlassian.net/wiki/spaces/MG/pages/3928817692/Cosmic+Catch+Technical+Documentation).
