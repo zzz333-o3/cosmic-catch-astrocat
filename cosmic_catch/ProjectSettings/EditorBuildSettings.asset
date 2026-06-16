@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 945d3a79aaf8ada4a9261761bb4a3016
+  - enabled: 1
+    path: Assets/Scenes/GreenTerra.unity
+    guid: 587d3673fa1f1ac469ba251eafb099c5
+  - enabled: 1
+    path: Assets/Scenes/OrangeDune.unity
+    guid: 29f64b2b0e7af264ba11ef07a2940b82
+  - enabled: 1
+    path: Assets/Scenes/Mechano.unity
+    guid: 568fabf8c29cee142904086061a3aa1f
+  - enabled: 1
+    path: Assets/Scenes/NeonCity.unity
+    guid: 3220932292d9ce5478a56cb415962850
+  - enabled: 1
+    path: Assets/Scenes/IceIgloo.unity
+    guid: 7296278e46b0fd54bab8dfee0723a8f1
+  - enabled: 1
+    path: Assets/Scenes/Crystallia.unity
+    guid: cc009e5c5aa3d5e429003e7aee1c9e06
+  - enabled: 1
+    path: Assets/Scenes/Aquamarine.unity
+    guid: 6e0f3180732113242b93d9ccaeaa7d88
+  - enabled: 1
+    path: Assets/Scenes/MagmaPrime.unity
+    guid: 85cc47557765b3440a58fdcac87fdb99
+  - enabled: 1
+    path: Assets/Scenes/FoggyVoid.unity
+    guid: a33cc167929bf7c45843498fd32df031
+  - enabled: 1
+    path: Assets/Scenes/HeartofGalaxy.unity
+    guid: 65483253bed96e84783e0453828ca604
+  - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: 0f56047ff7226ba4e8cb4decc43d2730
+  m_configObjects: {}
